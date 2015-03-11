@@ -9,5 +9,6 @@
  * @author alvaroberrocal
  */
 public class Habitacion {
+    private int numero;
     
 }
