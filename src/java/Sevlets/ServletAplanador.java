@@ -32,7 +32,7 @@ public class ServletAplanador extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("applocation/xml;charset=UTF-8");
+        response.setContentType("application/xml;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             out.println("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
             XStream mistream= new XStream();
