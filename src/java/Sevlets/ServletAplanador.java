@@ -13,9 +13,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import com.thoughtworks.xstream.XStream;
-import java.util.ArrayList;
-import java.util.List;
-import teamsBase.*;
 
 /**
  *
@@ -39,15 +36,11 @@ public class ServletAplanador extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             out.println("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
             XStream mistream= new XStream();
-            mistream.toXML(getTeams(), out);
+            mistream.toXML(null, out);
         }
     }
     
-    protected List<Team> getTeams(){
-        TeamsUtility utility= new TeamsUtility();
-        List<Team> lista = utility.getTeams();
-        return lista;
-    }
+    
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
